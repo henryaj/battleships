@@ -7,3 +7,9 @@ Feature: Starting the game
 		Given I am on the homepage
 		When I follow "New Game"
 		Then I should see "What's your name?"
+
+	Scenario: Registering
+		Given I am on the newplayer page
+		When I type in my name
+		Then I should see "Hello, " name
+		Then my name should be passed to player1.name
