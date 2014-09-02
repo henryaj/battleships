@@ -1,11 +1,7 @@
-When(/^I type in my name$/) do
-  pending # express the regexp above with the code you wish you had
+Then(/^a new game should be initialised$/) do
+  expect(Game).to receive(:new)
 end
 
-Then(/^I should see "(.*?)" name$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
-end
-
-Then(/^my name should be passed to player(\d+)\.name$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Then(/^player(\d+)\.name should equal "(.*?)"$/) do |arg1, arg2|
+  expect(game.player1.name).to eq arg2
 end
