@@ -7,10 +7,15 @@ Feature: Starting the game
 		Then I should see "What's your name?"
 		And I should see a form with field "Name"
 
-	Scenario: Registering player 1
+	Scenario: Filling in player 1's name
 	  Given I am on the homepage
 	  When I fill in the field "Name" with "my name"
 	  Then field "Name" should contain "my name"
+
+  
+	  
+	  
+	  
 	
 	
 	
