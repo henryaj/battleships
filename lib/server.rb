@@ -2,7 +2,11 @@ require 'sinatra/base'
 
 class BattleshipsOnline < Sinatra::Base
   get '/' do
-    'Hello BattleshipsOnline!'
+    erb :index
+  end
+
+  post '/new' do
+  	erb :new
   end
 
   # start the server if ruby file executed directly

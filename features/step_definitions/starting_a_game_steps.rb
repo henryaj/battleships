@@ -1,11 +1,11 @@
 Given(/^I am on the homepage$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-When(/^I follow "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+  visit('/')
 end
 
 Then(/^I should see "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+  expect(page).to have_content("What's your name?")
+end
+
+Then(/^I should see a form with field "(.*?)"$/) do |arg1|
+  expect(page).to have_field("Name")
 end

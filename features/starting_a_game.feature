@@ -4,5 +4,7 @@ Feature: Starting the game
 
 	Scenario: Player 1 registering
 		Given I am on the homepage
-		When I follow "New Game"
 		Then I should see "What's your name?"
+		And I should see a form with field "Name"
+
+		
