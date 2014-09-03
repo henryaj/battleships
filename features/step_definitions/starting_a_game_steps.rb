@@ -17,3 +17,15 @@ end
 Then(/^field "(.*?)" should contain "(.*?)"$/) do |arg1, arg2|
   find_field(arg1).value.should eq(arg2)
 end
+
+Given(/^I have filled in the field "(.*?)" with "(.*?)"$/) do |arg1, arg2|
+  fill_in(arg1, :with => arg2)
+end
+
+When(/^I follow "(.*?)"$/) do |arg1|
+  click_on arg1
+end
+
+Then(/^I should be taken to '\/new'$/) do
+  expect(current_path).to eq(new)
+end

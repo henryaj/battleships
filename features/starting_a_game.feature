@@ -12,7 +12,12 @@ Feature: Starting the game
 	  When I fill in the field "Name" with "my name"
 	  Then field "Name" should contain "my name"
 
-  
+  Scenario: Submitting registration form
+    Given I am on the homepage
+    And I have filled in the field "Name" with "my name"
+    When I follow "Submit"
+    Then I should be taken to '/new'
+    And I should see "Welcome, name!"
 	  
 	  
 	  

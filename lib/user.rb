@@ -1,3 +1,5 @@
+require_relative './tracking_board'
+
 class User
 
 	attr_accessor :name
