@@ -5,6 +5,8 @@ class User
 	attr_accessor :name
 	attr_accessor :score
 
+	attr_reader :unplaced_ships
+
 	attr_accessor :destroyer, :fisherboat, :patrol_boat, :battleship, :aircraft_carrier
 
 	def initialize

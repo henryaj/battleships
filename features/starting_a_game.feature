@@ -18,6 +18,14 @@ Feature: Starting the game
     When I follow "Submit"
     Then I should be taken to '/new'
     And I should see "Welcome, name!"
+
+  Scenario: title
+    Given context
+    When event
+    Then outcome
+  
+  
+  
 	  
 	  
 	  

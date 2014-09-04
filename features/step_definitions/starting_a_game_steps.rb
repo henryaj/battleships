@@ -23,7 +23,7 @@ Given(/^I have filled in the field "(.*?)" with "(.*?)"$/) do |arg1, arg2|
 end
 
 When(/^I follow "(.*?)"$/) do |arg1|
-  click_on arg1
+  click_on(arg1)
 end
 
 Then(/^I should be taken to '\/new'$/) do
