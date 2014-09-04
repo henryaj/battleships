@@ -1,4 +1,6 @@
 <% @title="New Player" %>
-<h3>Welcome, <%=@game.player1.name%>!</h3>
+<h3>Welcome, <%=GAME.player1.name%>!</h3>
 
-<p>You currently have <%= @game.player1.unplaced_ships.count %> ships left to place.</p>
+<p>You currently have <%= GAME.player1.unplaced_ships.count %> ships left to place.</p>
+
+<%= GAME.inspect %>

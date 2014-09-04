@@ -2,12 +2,8 @@ Given(/^I am on the homepage$/) do
   visit('/')
 end
 
-Then(/^I should see "(.*?)"$/) do |arg1|
-  expect(page).to have_content("What's your name?")
-end
-
 Then(/^I should see a form with field "(.*?)"$/) do |arg1|
-  expect(page).to have_field("Name")
+  expect(page).to have_field(arg1)
 end
 
 When(/^I fill in the field "(.*?)" with "(.*?)"$/) do |arg1, arg2|
@@ -27,5 +23,9 @@ When(/^I follow "(.*?)"$/) do |arg1|
 end
 
 Then(/^I should be taken to '\/new'$/) do
-  expect(current_path).to eq(new)
+  expect(current_path).to eq('/new')
+end
+
+Then(/^I should see "(.*?)"$/) do |arg1|
+  page.has_content?('arg1')
 end

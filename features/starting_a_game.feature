@@ -17,20 +17,5 @@ Feature: Starting the game
     And I have filled in the field "Name" with "my name"
     When I follow "Submit"
     Then I should be taken to '/new'
-    And I should see "Welcome, name!"
+    And I should see "my name"
 
-  Scenario: title
-    Given context
-    When event
-    Then outcome
-  
-  
-  
-	  
-	  
-	  
-	
-	
-	
-
-		

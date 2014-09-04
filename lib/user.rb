@@ -16,6 +16,7 @@ class User
 		@placed_ships = []
 		@score = @unplaced_ships.map { |ship| ship.hp }
 		@score = @score.inject {|sum, n| sum + n}
+		@name = nil
 	end
 
 	def create_boats

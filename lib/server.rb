@@ -1,8 +1,10 @@
 require 'sinatra/base'
 
 class BattleshipsOnline < Sinatra::Base
+
   configure do
   	require './lib/game'
+    GAME = Game.new
   end
 
   get '/' do
@@ -10,8 +12,7 @@ class BattleshipsOnline < Sinatra::Base
   end
 
   post '/new' do
-  	@game = Game.new
-  	@game.player1.name = params[:Name]
+  	GAME.player1.name = params[:Name]
   	erb :new
   end
 
