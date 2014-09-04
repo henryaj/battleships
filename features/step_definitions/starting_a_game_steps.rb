@@ -26,8 +26,8 @@ Then(/^I should be taken to '\/new'$/) do
   expect(current_path).to eq('/new')
 end
 
-Then(/^I should see "(.*?)"$/) do |arg1|
-  page.has_content?('arg1')
+Then(/^I should see "(.*?)"$/) do |arg1|	
+  page.has_content?(arg1)
 end
 
 Given(/^I am on the "New Player" page$/) do
@@ -40,4 +40,20 @@ end
 
 Then(/^I should see a "(.*?)" button$/) do |arg1|
   has_button?('arg1')
+end
+
+Given(/^there are no players registered$/) do
+  pending
+end
+
+Given(/^there is one player registered$/) do
+  pending # express the regexp above with the code you wish you had
+end
+
+Given(/^there are two players registered$/) do
+  pending # express the regexp above with the code you wish you had
+end
+
+Then(/^I should see an error$/) do
+  pending # express the regexp above with the code you wish you had
 end

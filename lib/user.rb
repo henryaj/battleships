@@ -7,7 +7,7 @@ class User
 
 	attr_reader :unplaced_ships
 
-	attr_accessor :destroyer, :fisherboat, :patrol_boat, :battleship, :aircraft_carrier
+	attr_accessor :destroyer, :fisherboat, :patrol_boat, :battleship, :aircraft_carrier, :registered
 
 	def initialize
 		@board = Board.new
@@ -17,6 +17,7 @@ class User
 		@score = @unplaced_ships.map { |ship| ship.hp }
 		@score = @score.inject {|sum, n| sum + n}
 		@name = nil
+		@registered = false
 	end
 
 	def create_boats
