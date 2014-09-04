@@ -19,3 +19,13 @@ Feature: Starting the game
     Then I should be taken to '/new'
     And I should see "my name"
 
+  Scenario: Placing ships
+    Given I am on the "New Player" page
+    Then I should see "you currently have 5 ships left to place"
+    And I should see "Place Fisherboat:"
+    And I should see a field "Ship Location" with placeholder "cell"
+    And I should see a "Submit" button 
+  
+  
+  
+

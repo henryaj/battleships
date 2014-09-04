@@ -29,3 +29,15 @@ end
 Then(/^I should see "(.*?)"$/) do |arg1|
   page.has_content?('arg1')
 end
+
+Given(/^I am on the "New Player" page$/) do
+  visit('/new')
+end
+
+Then(/^I should see a field "(.*?)" with placeholder "(.*?)"$/) do |arg1, arg2|
+  has_field?('arg1', :with => 'arg2')
+end
+
+Then(/^I should see a "(.*?)" button$/) do |arg1|
+  has_button?('arg1')
+end

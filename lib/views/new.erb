@@ -3,4 +3,7 @@
 
 <p>You currently have <%= GAME.player1.unplaced_ships.count %> ships left to place.</p>
 
-<%= GAME.inspect %>
+<form action="" method="post">
+Place Fisherboat: <input type="text" name="Ship Location" placeholder="cell">
+<button type="submit" name="Submit">Submit</button>
+</form>
