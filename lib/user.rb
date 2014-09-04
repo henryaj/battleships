@@ -5,9 +5,12 @@ class User
 
 	attr_accessor :destroyer, :fisherboat, :patrol_boat, :battleship, :aircraft_carrier
 
-	def initialize
+	attr_reader :name
+
+	def initialize(name)
+		@name = "some name"
 		@board = Board.new
-		@trackingboard = TrackingBoard.new
+		# @trackingboard = TrackingBoard.new
 		create_boats
 		@placed_ships = []
 		@score = @unplaced_ships.map { |ship| ship.hp }

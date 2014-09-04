@@ -1,0 +1,7 @@
+<h1>Welcome to Battleships.</h1>
+
+<p><a href="/new">New Game</a></p>
+
+<% if GAME.players.any? %>
+  <%= "Currently connected: #{GAME.players.count} players." %>
+<% end %>
