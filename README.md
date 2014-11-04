@@ -17,3 +17,22 @@ Using a CRC card exercise, we decided on using the following classes to describe
 * **User**, a player class that is instantiated as part of the **Game**
 * **Game**, an object that wraps all the other classes and is instantiated when the program is run
 
+## Design questions
+
+There are a number of ways to approach this challenge.
+
+### The Board
+
+Some groups opted for nested arrays, which give a neat grid when displayed on screen but make for less readable code (as addressing the items in an array using zero-order numbering is somewhat counterintuitive). We opted instead for a nested hash of arrays with letter keys in one dimension and number keys in the other, which makes addressing more readable but introduces other complexities – namely working with and incrementing letters.
+
+### Players and games
+
+We opted to create a 'Game' class that encapsulates the entire game – players, boards, ships and all – and create all of those when the game is instantiated. 
+
+### Destroying ships
+
+We chose to keep track of ships' health using 'hit points' – equal to the size of the ship, so a ship which spans five blocks has five hit points. Hit points decrease one per hit until they reach zero, at which point the ship is marked as 'sunk'.
+
+### Technologies
+
+This implementation of battleships is written in Ruby and tested with RSpec.
